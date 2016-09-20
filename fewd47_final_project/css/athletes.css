@@ -1,0 +1,164 @@
+
+body {
+
+	background-image: url('http://wallpapercave.com/wp/o5UXr4f.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	color: antiquewhite;
+	font-family: 'Droid Serif', serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+.main-nav {
+	opacity: .8;
+	display: block;
+	float: right;
+}
+
+h1 {
+	text-align: center;
+	font-size: 8rem;
+	background-image: url('http://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
+	max-width: 800px;
+    margin: auto;
+
+}
+
+h2{
+	text-align: center;
+	font-size: 4.5rem;
+	text-shadow: lightgoldenrodyellow 0 0 10px;
+	color: #FDD017;
+}
+
+#nicknameexplain {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bolder;
+}
+
+#explain {
+	text-align: center;
+	font-weight: bold;
+	font-size: 2.5rem;
+}
+
+
+h3 {
+	color: #FDD017;
+	font-size: 3rem;
+	z-index: 5; 
+	text-shadow: 2px 1px darkgray;
+  }
+ 
+
+.athletes{
+	text-align: center;
+}
+
+
+article {
+	float: left;
+}
+
+
+li {
+	background-color: darkgray;
+	text-decoration: none;
+	list-style: none;
+	float: left;
+	border: 2px solid antiquewhite;
+}
+
+li a {
+	display: block;
+	color: antiquewhite;
+	text-align: center;
+	padding: 10px 10px;
+	background-image: url('http://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
+}
+a {
+	color: antiquewhite;
+	font-weight: bold;
+}
+a:hover {
+	color: #FDD017;
+}
+
+img {
+	border: 5px solid darkblue;
+	margin: 15px auto 25px auto;
+	opacity: 0.75;
+	
+}
+
+img:hover {
+	transform: translateY(20px) scale(1.2,1.2);
+	transition: all .5s ease-in-out;
+	box-shadow: 5px 5px 0px #FDD017;
+	opacity: 1;
+	z-index: 10;
+	border-radius: 25%;
+
+}
+
+.bioparagraph {
+	display: none;
+	margin-top: 50px;
+	color: #FFD801;
+	font-weight: bolder;
+	font-size: 2rem;
+}
+
+
+.hamburger {
+	cursor: pointer;
+	display: block;
+	margin: 1rem auto;
+  	width: 2.5rem;
+  	position: relative;
+}
+
+.line {
+	border-bottom: 4px solid #FFD700;
+	width: 35px;
+	margin-bottom: 6px;
+}
+
+.line:last-child {
+	margin-bottom: 0;
+}
+
+/* nav li:first-child {
+	margin-top: 2rem;
+} */
+
+li {
+  border-top: 2px solid antiquewhite;
+  list-style: none;
+  transition: all 300ms ease-in-out;
+}
+
+.sidebar {
+	transform: translateX(100%);
+	transition: all .4s ease-in-out;
+}
+
+.active {
+	transform: translateX(0);
+}
+
+
+/* .close {
+	position: absolute;
+	top: 0;
+  	text-transform: none;
+  	font-size: 40px;
+  	color: #FFD801;
+  	font-weight: bolder;
+} */
+
+
+
+
