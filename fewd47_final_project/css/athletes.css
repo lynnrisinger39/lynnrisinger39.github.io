@@ -1,3 +1,10 @@
+.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-linear-gradient(red, green);
+  background: linear-gradient(red, green);
+}
 
 body {
 
@@ -12,14 +19,16 @@ body {
 
 .main-nav {
 	opacity: .8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
 	display: block;
 	float: right;
 }
 
 h1 {
 	text-align: center;
+	font-size: 128px;
 	font-size: 8rem;
-	background-image: url('http://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
+	background-image: url('https://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
 	max-width: 800px;
     margin: auto;
 
@@ -27,6 +36,7 @@ h1 {
 
 h2{
 	text-align: center;
+	font-size: 72px;
 	font-size: 4.5rem;
 	text-shadow: lightgoldenrodyellow 0 0 10px;
 	color: #FDD017;
@@ -34,6 +44,7 @@ h2{
 
 #nicknameexplain {
 	text-align: center;
+	font-size: 48px;
 	font-size: 3rem;
 	font-weight: bolder;
 }
@@ -41,12 +52,14 @@ h2{
 #explain {
 	text-align: center;
 	font-weight: bold;
+	font-size: 40px;
 	font-size: 2.5rem;
 }
 
 
 h3 {
 	color: #FDD017;
+	font-size: 48px;
 	font-size: 3rem;
 	z-index: 5; 
 	text-shadow: 2px 1px darkgray;
@@ -76,7 +89,7 @@ li a {
 	color: antiquewhite;
 	text-align: center;
 	padding: 10px 10px;
-	background-image: url('http://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
+	background-image: url('https://i361.photobucket.com/albums/oo54/crackysparkles/sparkles/2hqxzyo.gif');
 }
 a {
 	color: antiquewhite;
@@ -90,14 +103,18 @@ img {
 	border: 5px solid darkblue;
 	margin: 15px auto 25px auto;
 	opacity: 0.75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 	
 }
 
 img:hover {
-	transform: translateY(20px) scale(1.2,1.2);
+	-webkit-transform: translateY(20px) scale(1.2,1.2);
+	        transform: translateY(20px) scale(1.2,1.2);
+	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 	box-shadow: 5px 5px 0px #FDD017;
 	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	z-index: 10;
 	border-radius: 25%;
 
@@ -108,47 +125,109 @@ img:hover {
 	margin-top: 50px;
 	color: #FFD801;
 	font-weight: bolder;
+	font-size: 32px;
 	font-size: 2rem;
 }
-
-
-.hamburger {
-	cursor: pointer;
-	display: block;
-	margin: 1rem auto;
-  	width: 2.5rem;
-  	position: relative;
-}
-
-.line {
-	border-bottom: 4px solid #FFD700;
-	width: 35px;
-	margin-bottom: 6px;
-}
-
-.line:last-child {
-	margin-bottom: 0;
-}
-
-/* nav li:first-child {
-	margin-top: 2rem;
-} */
 
 li {
   border-top: 2px solid antiquewhite;
   list-style: none;
+  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
+.hamburger {
+	cursor: pointer;
+	display: block;
+	margin: 16px auto;
+	margin: 1rem auto;
+  	width: 40px;
+  	width: 2.5rem;
+  	position: relative;
+}
+
+
 .sidebar {
-	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	        transform: translateX(100%);
+	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 
 .active {
-	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
 }
 
+.line:nth-child(1) {
+  top: 0;
+}
+
+.line:nth-child(2) {
+  top: 12px;
+}
+
+.line:nth-child(3) {
+  top: 24px;
+}
+
+.line {
+  width: 40px;
+  width: 2.5rem;
+  height: 5px;
+  height: .3125rem;
+  background: #E7E6DD;
+  border-radius: 2.5rem;
+  border-bottom: 4px solid #FFD700;
+  margin-bottom: 6px;
+  position: absolute;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+  /* 1. Set the transition property */
+  /* Syntax: propertiesToAnimate animationDuration animationEffect */
+  /* Example: all .3s ease-in-out */
+
+
+/* MIDDLE line */
+.active .line:nth-child(2) {
+  /* 2. When the active class is added to the .hamburger-icon:
+      a) Fade the middle line out (hint: you will need to update the 'opacity' property).
+      b) Move the middle line 16px to the left using a transform (hint: use translateX with a negative px value)  */
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transform: translate(-16px);
+            transform: translate(-16px);
+
+}
+
+/* TOP line */
+.active .line:first-child {
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px down (hint: use translateY)
+        b) Rotate the line 135 degrees
+  */
+  -webkit-transform: translateY(12px) rotate(135deg);
+          transform: translateY(12px) rotate(135deg);
+  
+}
+
+/* BOTTOM line */
+.active .line:last-child {
+  /* 3. When the active class is added to the .hamburger-icon,
+        use the transform property to do BOTH of the following:
+        a) Move the top line 12px up (hint: use translateY and a negative px value)
+        b) Rotate the line -135 degrees
+  */
+
+  -webkit-transform: translateY(-12px) rotate(-135deg);
+
+          transform: translateY(-12px) rotate(-135deg);
+
+}
 
 /* .close {
 	position: absolute;
@@ -158,7 +237,3 @@ li {
   	color: #FFD801;
   	font-weight: bolder;
 } */
-
-
-
-

@@ -6,6 +6,13 @@ then these styles will go in homepage.css
 	box-sizing: border-box;
 	border: 1px solid black;
 } */
+.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-linear-gradient(red, green);
+  background: linear-gradient(red, green);
+}
 
 body {
 	font-family: 'Lobster Two', cursive;

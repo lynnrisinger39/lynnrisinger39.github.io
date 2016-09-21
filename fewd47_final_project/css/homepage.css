@@ -1,5 +1,13 @@
+.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-linear-gradient(red, green);
+  background: linear-gradient(red, green);
+}
+
 body {
-	background-image: url('../images/finalfivewithgold.jpg');
+	background-image: url('images/finalfivewithgold.jpg');
 	background-repeat: no-repeat;
 	color:white;
 	background-size: cover;	
@@ -36,6 +44,7 @@ footer{
 nav{
 	background-color: gray;
 	opacity: .75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 	position: fixed;
 	z-index: 10;
 	left: 0;
@@ -77,22 +86,27 @@ a:hover{
 }
 
 nav li:first-child {
+	margin-top: 32px;
 	margin-top: 2rem;
 }
 
 li {
   border-top: 1px solid rgba(0,0,0,0.2);
   list-style: none;
+  -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
 .sidebar {
-	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	        transform: translateX(-100%);
+	-webkit-transition: all .4s ease-in-out;
 	transition: all .4s ease-in-out;
 }
 
 .active {
-	transform: translateX(0);
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
 }
 
 .close {

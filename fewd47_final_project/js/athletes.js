@@ -4,15 +4,17 @@ $('.athletes').find('img').on('click', function() {
 });
 
 
-$('.hamburger').on('click', function(){
+$('.hamburger').on('click', function(e){
+	e.preventDefault();
 	$('.sidebar').toggleClass('active')
+
 });
 
 // when user clicks on .close
 // 	prevent default action of page refreshing 
 // 	remove active class
 
-$('.close').on('click',function(e){
-	e.preventDefault();
-	$('.sidebar').removeClass('active')
-});
+// $('.close').on('click',function(e){
+// 	e.preventDefault();
+// 	$('.sidebar').removeClass('active')
+// });
